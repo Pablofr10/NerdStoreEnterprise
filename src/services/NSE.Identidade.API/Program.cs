@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using NSE.Identidade.API.Data;
+using NSE.Identidade.API.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.IdentityDependency();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");

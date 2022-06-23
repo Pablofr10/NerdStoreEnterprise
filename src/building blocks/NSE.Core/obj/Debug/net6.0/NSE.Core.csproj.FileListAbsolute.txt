@@ -1,0 +1,12 @@
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\bin\Debug\net6.0\NSE.Core.deps.json
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\bin\Debug\net6.0\NSE.Core.dll
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\bin\Debug\net6.0\NSE.Core.pdb
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.csproj.AssemblyReference.cache
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.AssemblyInfoInputs.cache
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.AssemblyInfo.cs
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.csproj.CoreCompileInputs.cache
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.dll
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\refint\NSE.Core.dll
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\NSE.Core.pdb
+C:\Users\pablo\Documents\Cursos\DotNet\Projetos\src\building blocks\NSE.Core\obj\Debug\net6.0\ref\NSE.Core.dll

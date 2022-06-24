@@ -4,7 +4,7 @@ using NSE.Identidade.API.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.IdentityDependency();
+builder.Services.IdentityDependency(builder.Configuration.GetSection("AppSettings"));
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     var connectionString = builder.Configuration.GetConnectionString("DefaultConnectionString");

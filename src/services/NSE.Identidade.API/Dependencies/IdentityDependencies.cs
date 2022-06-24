@@ -9,9 +9,7 @@ namespace NSE.Identidade.API.Dependencies;
 
 public static class IdentityDependencies
 {
-    private static readonly IConfiguration _configuration;
-
-    public static void IdentityDependency(this IServiceCollection services)
+    public static void IdentityDependency(this IServiceCollection services, IConfigurationSection appSettingsSection)
     {
         services.AddDefaultIdentity<IdentityUser>()
             .AddRoles<IdentityRole>()
@@ -19,7 +17,7 @@ public static class IdentityDependencies
             .AddDefaultTokenProviders();
 
         // Jwt
-        var appSettingsSection = _configuration.GetSection("AppSettings");
+        
         services.Configure<AppSettings>(appSettingsSection);
 
         var appSettings = appSettingsSection.Get<AppSettings>();

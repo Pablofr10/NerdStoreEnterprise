@@ -7,13 +7,11 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using NSE.Identidade.API.Extensions;
 using NSE.Identidade.API.Models;
-using JwtRegisteredClaimNames = Microsoft.IdentityModel.JsonWebTokens.JwtRegisteredClaimNames;
 
 namespace NSE.Identidade.API.Controllers;
 
-[ApiController]
 [Route("api/identidade")]
-public class AuthController : ControllerBase
+public class AuthController : MainController
 {
 
     private readonly UserManager<IdentityUser> _userManager;

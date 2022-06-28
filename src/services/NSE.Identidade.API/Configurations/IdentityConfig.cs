@@ -7,7 +7,7 @@ using NSE.Identidade.API.Extensions;
 
 namespace NSE.Identidade.API.Dependencies;
 
-public static class IdentityDependencies
+public static class IdentityConfig
 {
     public static void IdentityDependency(this IServiceCollection services, IConfigurationSection appSettingsSection)
     {
@@ -18,7 +18,6 @@ public static class IdentityDependencies
             .AddDefaultTokenProviders();
 
         // Jwt
-        
         services.Configure<AppSettings>(appSettingsSection);
 
         var appSettings = appSettingsSection.Get<AppSettings>();

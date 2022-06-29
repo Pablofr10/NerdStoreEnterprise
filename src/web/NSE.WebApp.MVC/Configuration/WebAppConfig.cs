@@ -19,6 +19,8 @@ public static class WebAppConfig
 
         app.UseRouting();
 
+        app.UseIdentityConfiguration();
+
         app.MapControllerRoute(
             name: "default",
             pattern: "{controller=Home}/{action=Index}/{id?}");

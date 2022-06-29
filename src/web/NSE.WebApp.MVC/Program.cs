@@ -8,8 +8,6 @@ builder.Services.AddMvcConfiguration();
 
 var app = builder.Build();
 
-app.UseIdentityConfiguration();
-
 app.UseApiConfiguration();
 
 app.Run();

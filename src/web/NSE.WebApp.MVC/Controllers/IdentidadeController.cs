@@ -1,10 +1,18 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using NSE.WebApp.MVC.Models;
+using NSE.WebApp.MVC.Services;
 
 namespace NSE.WebApp.MVC.Controllers;
 
 public class IdentidadeController : Controller
 {
+    private readonly IAutenticacaoService _autenticacaoService;
+
+    public IdentidadeController(IAutenticacaoService autenticacaoService)
+    {
+        _autenticacaoService = autenticacaoService;
+    }
+
     [HttpGet]
     [Route("nova-conta")]
     public IActionResult Registro()
@@ -30,6 +38,7 @@ public class IdentidadeController : Controller
     [Route("login")]
     public async Task<IActionResult> Login(UsuarioLogin usuarioRegistro)
     {
+
         return RedirectToAction("Login");
     }
 

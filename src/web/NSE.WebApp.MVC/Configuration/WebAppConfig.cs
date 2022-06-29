@@ -4,6 +4,7 @@ public static class WebAppConfig
 {
     public static void AddMvcConfiguration(this IServiceCollection services)
     {
+        services.AddIdentityConfiguration();
         services.AddControllersWithViews();
         services.RegisterServices();
     }

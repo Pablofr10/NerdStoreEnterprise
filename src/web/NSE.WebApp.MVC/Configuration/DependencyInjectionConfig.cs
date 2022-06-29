@@ -6,7 +6,7 @@ public static class DependencyInjectionConfig
 {
     public static void RegisterServices(this IServiceCollection services)
     {
-        services.AddScoped<IAutenticacaoService, AutenticacaoService>();
+        services.AddHttpClient<IAutenticacaoService, AutenticacaoService>();
     }
 
 }

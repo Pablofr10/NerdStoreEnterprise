@@ -16,7 +16,7 @@ public class IdentidadeController : Controller
     [Route("nova-conta")]
     public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro)
     {
-
+        return RedirectToAction("Login");
     }
 
     [HttpGet]
@@ -30,13 +30,13 @@ public class IdentidadeController : Controller
     [Route("login")]
     public async Task<IActionResult> Login(UsuarioLogin usuarioRegistro)
     {
-
+        return RedirectToAction("Login");
     }
 
     [HttpGet]
     [Route("sair")]
     public async Task<IActionResult> Logout()
     {
-
+        return RedirectToAction("Login");
     }
 }

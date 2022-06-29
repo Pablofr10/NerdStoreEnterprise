@@ -1,5 +1,4 @@
 using NSE.Identidade.API.Configurations;
-using NSE.Identidade.API.Dependencies;
 
 var builder = WebApplication.CreateBuilder(args);
 

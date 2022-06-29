@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using NSE.Identidade.API.Data;
 using NSE.Identidade.API.Extensions;
 
-namespace NSE.Identidade.API.Dependencies;
+namespace NSE.Identidade.API.Configurations;
 
 public static class IdentityConfig
 {

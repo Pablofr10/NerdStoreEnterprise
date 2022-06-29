@@ -5,6 +5,7 @@ public static class WebAppConfig
     public static void AddMvcConfiguration(this IServiceCollection services)
     {
         services.AddControllersWithViews();
+        services.RegisterServices();
     }
     public static void UseApiConfiguration(this WebApplication app)
     {

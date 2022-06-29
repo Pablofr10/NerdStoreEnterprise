@@ -32,4 +32,11 @@ public class IdentidadeController : Controller
     {
 
     }
+
+    [HttpGet]
+    [Route("sair")]
+    public async Task<IActionResult> Logout()
+    {
+
+    }
 }

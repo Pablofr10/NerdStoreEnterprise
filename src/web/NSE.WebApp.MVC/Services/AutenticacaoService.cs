@@ -12,7 +12,7 @@ public class AutenticacaoService : IAutenticacaoService
     {
         _httpClient = httpClient;
     }
-    public async Task<string> Login(UsuarioLogin usuarioLogin)
+    public async Task<UsuarioRespostaLogin> Login(UsuarioLogin usuarioLogin)
     {
         var loginContent = new StringContent(
             JsonSerializer.Serialize(usuarioLogin),
@@ -23,11 +23,25 @@ public class AutenticacaoService : IAutenticacaoService
 
         var response = await _httpClient.PostAsync(url, loginContent);
 
-        return JsonSerializer.Deserialize<string>(await response.Content.ReadAsStringAsync());
+        var options = new JsonSerializerOptions
+        {
+            PropertyNameCaseInsensitive = true
+        };
+
+        return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync(), options);
     }
 
-    public Task<string> Registro(UsuarioRegistro usuarioRegistro)
+    public async Task<UsuarioRespostaLogin> Registro(UsuarioRegistro usuarioRegistro)
     {
-        throw new NotImplementedException();
+        var registroContent = new StringContent(
+            JsonSerializer.Serialize(usuarioRegistro),
+            Encoding.UTF8,
+            "application/json");
+
+        string url = "https://localhost:7209/api/identidade/nova-conta";
+
+        var response = await _httpClient.PostAsync(url, registroContent);
+
+        return JsonSerializer.Deserialize<UsuarioRespostaLogin>(await response.Content.ReadAsStringAsync());
     }
 }

@@ -24,6 +24,10 @@ public class IdentidadeController : Controller
     [Route("nova-conta")]
     public async Task<IActionResult> Registro(UsuarioRegistro usuarioRegistro)
     {
+        if (!ModelState.IsValid) return View(usuarioRegistro);
+
+        var resposta = await _autenticacaoService.Registro(usuarioRegistro);
+
         return RedirectToAction("Login");
     }
 
@@ -36,8 +40,11 @@ public class IdentidadeController : Controller
 
     [HttpPost]
     [Route("login")]
-    public async Task<IActionResult> Login(UsuarioLogin usuarioRegistro)
+    public async Task<IActionResult> Login(UsuarioLogin usuarioLogin)
     {
+        if (!ModelState.IsValid) return View(usuarioLogin);
+
+        var resposta = await _autenticacaoService.Login(usuarioLogin);
 
         return RedirectToAction("Login");
     }
